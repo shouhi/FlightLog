@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>686827112760-a6kahfecog4q15e3u22vaqnd8oah6gh7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.686827112760-a6kahfecog4q15e3u22vaqnd8oah6gh7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAsQ5ipr432e2VdkNxhdFAxQ2e-Z6havzM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>686827112760</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>net.shohi.flightLog</string>
+	<key>PROJECT_ID</key>
+	<string>drone-265c4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>drone-265c4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:686827112760:ios:a2843a257fb7b11f19d9cd</string>
+</dict>
+</plist>
