@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flight_log/importer.dart';
+import 'package:flight_log/widgets/widgets.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -32,7 +32,7 @@ class Welcome extends StatelessWidget {
                       minWidth: double.infinity,
                       height: 60,
                       onPressed: () {
-                        // Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
                       },
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
