@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "686827112760",
+    "project_id": "drone-265c4",
+    "storage_bucket": "drone-265c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686827112760:android:bd5137be3f6b6b8c19d9cd",
+        "android_client_info": {
+          "package_name": "net.shohi.flight_log"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686827112760-9ibtmh82lmcvs550d5skku02bor3tlfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt7QGPyK9mXkMZzFl-SWYxClOyvJzlKEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686827112760-9ibtmh82lmcvs550d5skku02bor3tlfq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "686827112760-a6kahfecog4q15e3u22vaqnd8oah6gh7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.shohi.flightLog"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

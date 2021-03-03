@@ -1,4 +1,5 @@
 import 'package:flight_log/importer.dart';
+import 'package:flight_log/views/welcome.dart';
 
 class SignUp extends StatefulWidget {
   SignUp({Key key}) : super(key: key);
@@ -22,10 +23,10 @@ class _SignUpState extends State<SignUp> {
     pwdInputController = TextEditingController();
 
     _showPassword = false;
-    // Firebase.initializeApp().whenComplete(() {
-    //   print("completed");
-    //   setState(() {});
-    // });
+    Firebase.initializeApp().whenComplete(() {
+      print("completed");
+      setState(() {});
+    });
   }
 
   // e-Mailバリデーション
@@ -51,37 +52,38 @@ class _SignUpState extends State<SignUp> {
 
   // アカウント登録
   void registeUser() {
-    // if (_signupKey.currentState.validate()) {
-    //   FirebaseAuth.instance
-    //       .createUserWithEmailAndPassword(
-    //       email: emailInputController.text,
-    //       password: pwdInputController.text)
-    //       .then((result) => {
-    //         FirebaseFirestore.instance
-    //             .collection('memberProfile')
-    //             .doc(FirebaseAuth.instance.currentUser.uid)
-    //             .set({
-    //           'description': '',
-    //           'docId': FirebaseAuth.instance.currentUser.uid,
-    //           'github_id': '',
-    //           'goal': '',
-    //           'imagePath': '',
-    //           'job': '',
-    //           'message': '',
-    //           'name': '',
-    //           'name_kana': '',
-    //           'slack_user_id': '',
-    //         }),
-    //     Navigator.pushAndRemoveUntil(
-    //         context,
-    //         MaterialPageRoute(builder: (context) => MemberPage()),
-    //             (_) => false),
-    //     emailInputController.clear(),
-    //     pwdInputController.clear(),
-    //   })
-    //       .catchError((err) => print(err))
-    //       .catchError((err) => print(err));
-    // }
+    if (_signupKey.currentState.validate()) {
+      FirebaseAuth.instance
+          .createUserWithEmailAndPassword(
+          email: emailInputController.text,
+          password: pwdInputController.text)
+          .then((result) => {
+            // FirebaseFirestore.instance
+            //     .collection('memberProfile')
+            //     .doc(FirebaseAuth.instance.currentUser.uid)
+            //     .set({
+            //   'description': '',
+            //   'docId': FirebaseAuth.instance.currentUser.uid,
+            //   'github_id': '',
+            //   'goal': '',
+            //   'imagePath': '',
+            //   'job': '',
+            //   'message': '',
+            //   'name': '',
+            //   'name_kana': '',
+            //   'slack_user_id': '',
+            // }),
+        print(result),
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => Welcome()),
+                (_) => false),
+        emailInputController.clear(),
+        pwdInputController.clear(),
+      })
+          .catchError((err) => print(err))
+          .catchError((err) => print(err));
+    }
   }
 
   @override
@@ -125,7 +127,9 @@ class _SignUpState extends State<SignUp> {
                               color: Const.utilColor["white"],
                               fontSize: 60,
                               fontWeight: FontWeight.bold)))),
-              Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+              Form(
+                key: _signupKey,
+                child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
                   child: Container(
@@ -248,6 +252,7 @@ class _SignUpState extends State<SignUp> {
                   height: 40,
                 )
               ])
+              )
             ],
           ),
         )
